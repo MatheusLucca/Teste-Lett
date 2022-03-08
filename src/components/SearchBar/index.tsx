@@ -20,6 +20,7 @@ export function SearchBar({ handleNewRepositories, filterRepositories }: SearchB
                 <button
                     onClick={() => {
                         handleNewRepositories(org)
+                        setOrg('')
                     }}>Carregar Repositórios</button>
 
                 <input type="text"

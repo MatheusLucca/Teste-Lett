@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { RepositoryList } from "../RepositoryList";
-import { SearchBar } from "../SearchBar";
+import { RepositoryList } from "../../components/RepositoryList";
+import { SearchBar } from "../../components/SearchBar";
 import { Container } from "./style";
 
 interface Repository {
@@ -15,10 +15,17 @@ export function RepositoriesPage() {
 
     function handleNewRepositories(org: string) {
         fetch(`https://api.github.com/orgs/${org}/repos`).then(response => {
-            if (!response.ok) { throw response }
+            if (!response.ok) {
+                setRepositories([])
+                document.getElementById('error')!.innerHTML = 'Organização inválida'
+                throw response
+            }
             return response.json()  //we only get here if there is no error
 
-        }).then(data => setRepositories(data))
+        }).then(data => {
+            document.getElementById('error')!.innerHTML = ''
+            setRepositories(data)
+        })
     }
     function filterRepositories(filt: string) {
         const auxRepositories = repositories.filter((repositorie) => {
@@ -28,8 +35,10 @@ export function RepositoriesPage() {
     }
     return (
         <Container>
+
             <SearchBar handleNewRepositories={handleNewRepositories} filterRepositories={filterRepositories} />
             <RepositoryList repositories={repositories} />
+            <span id="error"></span>
         </Container>
     )
 }

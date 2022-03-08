@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import { RepositoriesPage } from './components/RepositoriesPage'
+import { RepositoriesPage } from './pages/RepositoriesPage'
 import { About } from './pages/About'
 
 export default function MainRoutes() {

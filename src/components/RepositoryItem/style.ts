@@ -4,15 +4,16 @@ import styled from 'styled-components'
 export const Container = styled.li`
 
             border-bottom: 1px solid gray ;
-            margin-top: 20px;
-            
+            & + li{
+                margin-top: 20px;
+            }
             strong{
-                color: var(--text-title);
+                color: var(--text);
                 font-size:2rem;
             }
             p{
                 font-size: 1.2rem;
-                color: var(--text-title);
+                color: var(--text);
                 margin-top: 8px;
             }
             
