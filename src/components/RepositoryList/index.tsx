@@ -4,23 +4,22 @@ import { Container } from "./style";
 
 
 interface Repository {
+    id: number;
     name: string;
     description: string;
     html_url: string;
 }
 
-export function RepositoryList() {
-    const [repositories, setRepositories] = useState<Repository[]>([])
-    useEffect(() => {
-        fetch('https://api.github.com/users/MatheusLucca/repos').then(
-            response => response.json()
-        ).then(data => setRepositories(data))
-    })
+interface RepositoryListProps {
+    repositories: Repository[];
+}
+export function RepositoryList({ repositories }: RepositoryListProps) {
+
     return (
         <Container>
-            <h1>Lista de repositórios</h1>
+
             <ul>
-                {repositories.map(repository => { return <RepositoryItem repository={repository} /> })}
+                {repositories.map(repository => { return <RepositoryItem key={repository.id} repository={repository} /> })}
             </ul>
         </Container>
     )

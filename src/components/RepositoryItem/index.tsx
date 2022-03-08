@@ -16,6 +16,7 @@ export function RepositoryItem({ repository }: RepositoryItemProps) {
             <a href={repository.html_url}>
                 Acessar Repositório
             </a>
+
         </Container>
     )
 }

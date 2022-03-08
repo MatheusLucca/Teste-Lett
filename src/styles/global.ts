@@ -35,6 +35,13 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
+  body, input, textarea, button{
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
+  }
+  h1,h2,strong{
+    font-weight:700;
+  }
   button {
     cursor: pointer;
   }

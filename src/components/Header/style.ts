@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.header`
     background-color: var(--blue);
-
+    margin-bottom: 2rem;
 `
 
 export const Content = styled.nav`
@@ -19,8 +19,13 @@ export const Content = styled.nav`
         display: flex;
         gap: 4.5rem;
     }
-
-    a{
+    button{
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        outline: inherit;
         color: #fff;
         transition: filter 0.2s;
         &:hover{
@@ -28,7 +33,7 @@ export const Content = styled.nav`
         }
 
     }
-    a:last-child{
+    button:last-child{
         display: flex;
         align-items: center;
     }
