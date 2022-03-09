@@ -3,4 +3,9 @@
 ## Tecnologias utilizadas
 React, TypeScript, React-Icons, React-Router-Dom e Styled-Components.
 
-Este projeto
+## Link projeto
+https://matheuslucca.github.io
+
+O projeto consiste em um site que realiza uma requisição em uma api pública do github e retorna repositórios públicos de uma organização no github em uma tela, o nome da organização é passado via campo de texto, é possível filtrar os repósitorios pelo nome por outro campo de texto e possui uma outra página sobre.
+
+
