@@ -1,7 +1,11 @@
 # Projeto criado para o teste técnico da vaga de estágio na empresa Lett 
 
 ## Tecnologias utilizadas
-React, TypeScript, React-Icons, React-Router-Dom e Styled-Components.
+- React
+- TypeScript
+- React-Icons 
+- React-Router-Dom 
+- Styled-Components
 
 ## Link projeto
 https://matheuslucca.github.io/Teste-Lett/
